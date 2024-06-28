@@ -37,8 +37,16 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _txtSenha = TextEditingController();
 
   void _login() {
+    var usuario = _txtUsuario.text;
+
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const MenuPage()));
+      context,
+      MaterialPageRoute(
+        builder: (context) => MenuPage(
+          usuario: usuario,
+        ),
+      ),
+    );
   }
 
   @override

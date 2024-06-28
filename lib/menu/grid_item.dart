@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:superapp/listaherois/herois_list_page.dart';
+import 'package:superapp/herois/herois_list_page.dart';
 import 'package:superapp/ia/ia_input_page.dart';
 
 class GridItem extends StatelessWidget {

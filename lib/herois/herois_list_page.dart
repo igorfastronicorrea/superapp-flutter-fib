@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:superapp/api/api_service.dart';
-import 'package:superapp/listaherois/heroi_list_item.dart';
+import 'package:superapp/herois/heroi_list_item.dart';
 import 'package:superapp/model/heroi_item_model.dart';
 
 class HeroisListPage extends StatefulWidget {
