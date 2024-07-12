@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:superapp/bateria/bateria_page.dart';
+import 'package:superapp/camera/camera_page.dart';
 import 'package:superapp/herois/herois_list_page.dart';
 import 'package:superapp/ia/ia_input_page.dart';
+import 'package:superapp/starwars/starwars_list_page.dart';
 
 class GridItem extends StatelessWidget {
   final int index;
@@ -14,13 +17,15 @@ class GridItem extends StatelessWidget {
       Icons.computer_rounded,
       Icons.museum,
       Icons.camera,
+      Icons.battery_0_bar
     ];
 
     List<String> tituloList = [
       "Listagem de Herois",
       "Inteligência Artificial",
-      "Atrações Turísticas",
-      "Criar Atração"
+      "Star wars",
+      "Camera",
+      "Bateria"
     ];
 
     IconData iconData = iconList[index];
@@ -33,6 +38,14 @@ class GridItem extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const HeroisListPage())),
           1 => Navigator.push(context,
               MaterialPageRoute(builder: (context) => const IaInputPage())),
+          2 => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const StarWarsListPage())),
+          3 => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const CameraPage())),
+          4 => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const BateriaPage())),
           _ => print("opcao nao implementada")
         },
       },

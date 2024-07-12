@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:superapp/herois/herois_list_page.dart';
 import 'package:superapp/menu/grid_item.dart';
@@ -20,15 +21,12 @@ class _MenuPageState extends State<MenuPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Menu"),
-      ),
-      body: GridView.count(
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(middle: Text("Menu")),
+      child: GridView.count(
         crossAxisCount: 2,
         children: List.generate(
-          4,
+          5,
           (index) {
             return GridItem(
               index: index,

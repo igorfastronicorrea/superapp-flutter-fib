@@ -2,8 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:superapp/menu/menu_page.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
+
+  print('Iniciando a operação');
+  String data = await fetchData();
+  print(data);
+}
+
+Future<String> fetchData() async {
+  await Future.delayed(Duration(seconds: 2));
+  return 'Dados recebidos';
 }
 
 class MyApp extends StatelessWidget {
